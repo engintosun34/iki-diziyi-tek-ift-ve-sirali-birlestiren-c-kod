@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main()
+{
+    int dizi[10];
+    int a,j,sayitut;
+    srand(time(NULL));
+
+    printf("Rastgele sayilar:\n");
+    for(a=0;a<10;a++)
+    {
+       dizi[a] = rand()%101;
+       printf("%d ",dizi[a]);
+    }
+    for(a=0;a<9;a++)
+    {
+           for (j=0;j<9;j++)
+          {
+           if (dizi[j]>dizi[j+1])
+           {
+               sayitut=dizi[j];
+               dizi[j]=dizi[j+1];
+               dizi[j+1]=sayitut;
+           }
+          }
+    }
+
+     printf("\nSiralanmis dizi:\n");
+    for(a=0;a<10;a++)
+    {
+       printf("%d ",dizi[a]);
+    }
+
+
+    printf("\nOnce tek sayilar, sonra cift sayilar sirali dizi:\n");
+    for(a=0;a<2;a++)
+    {
+        for(a=0;a<10;a++)
+        {
+        if(dizi[a]%2!=0)
+            printf("%d ",dizi[a]);
+        }
+        for(a=0;a<10;a++)
+        {
+        if(dizi[a]%2==0)
+            printf("%d ",dizi[a]);
+        }
+    }
+
+
+    return 0;
+}
