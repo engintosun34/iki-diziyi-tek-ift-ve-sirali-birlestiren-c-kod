@@ -1,0 +1,1 @@
+# iki-diziyi-tek-ift-ve-sirali-birlestiren-c-kod
